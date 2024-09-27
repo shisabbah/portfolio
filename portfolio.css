@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #000000;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.navbar a:hover {
+  background-color: #000000;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.pres {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: larger;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 55px;
+  padding: 10px;
+}
+
+.carousel {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.container {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container:nth-child(2n) {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+
+  .container:nth-child(2n) {
+      margin-left: auto;
+  }
+}
+
+.image {
+  border-radius: 5%;
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}

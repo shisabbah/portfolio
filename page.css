@@ -1,0 +1,338 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+}
+
+#Compétences h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+}
+
+#Compétences img {
+  width: calc(40% - 10px);
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.image-pair {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.image-pair img {
+  width: calc(50% - 10px);
+  max-width: 100px;
+}
+
+.navbar {
+  background-color: #000000;
+  text-align: center;
+  padding-right: 15px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.navbar a:hover {
+  background-color: #000000;
+}
+
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.pres {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: larger;
+}
+
+.pres h1 {
+  font-family: "Just Me Again Down Here", cursive;
+  text-align: center;
+  font-size: 100px;
+}
+
+#langues {
+  text-align: center;
+}
+
+#langues h2 {
+  margin-bottom: 20px;
+}
+
+#langues p,
+#langues img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#langues p {
+  margin-right: 10px;
+}
+
+#langues img {
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  width: 800px;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+.trav h3,
+.trav i,
+.trav p,
+.a2025 h3,
+.a2025 i,
+.a2025 p,
+.a2024 h3,
+.a2024 i,
+.a2024 p,
+.a2022 h3,
+.a2022 i,
+.a2022 p,
+.a2021 h3,
+.a2021 i,
+.a2021 p {
+  margin-top: 0; /* Réduit la marge supérieure de tous les éléments h3, i, p dans chaque div */
+  margin-bottom: 10px; /* Ajoute une marge inférieure pour séparer les éléments */
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+}
+
+footer p {
+  color: #f4f4f4;
+  padding-right: 20px;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ln {
+  width: 50px;
+  height: auto;
+}
+
+.phone,
+.mail,
+.place {
+  width: 30px;
+  height: auto;
+  padding: 10px;
+}
+
+.footer h2 {
+  color: #f4f4f4;
+  padding: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hidden-text {
+  position: absolute;
+  left: -9999px;
+}
+
+.ln-link {
+  display: inline-block;
+}
+
+.footer .f1,
+.footer .f2,
+.footer .f3 {
+  display: flex;
+  align-items: center;
+}
+
+.footer .f1 h2,
+.footer .f2 h2,
+.footer .f3 h2 {
+  margin-left: 10px;
+}
+
+.card-container {
+  position: relative;
+  height: 322px;
+  width: 300px;
+  perspective: 1000px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 130%;
+  margin-left: -200px;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: absolute;
+  height: 50%; /* Garde la taille de la carte à 50% du conteneur */
+  width: 50%;  /* Garde la largeur de la carte à 50% du conteneur */
+  top: 22%; 
+  left: 50%; /* Centre horizontalement la carte */
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+
+.card-front {
+  background: rgb(6, 30, 6);
+}
+
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(194, 203, 206);
+  transform: rotateY(180deg);
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .image-pair {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-pair img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+
+  .pres h1 {
+    font-size: 50px;
+  }
+
+  #langues img {
+    width: 40%;
+  }
+
+  .footer p, .footer h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-pair img {
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer p, .footer h2 {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cv ShirelSabbah</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="page.html">Accueil</a></li>
+      <li><a href="page.html">Compétences</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="page.html">Formations</a></li>
+      <li><a href="page.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <img src="assets/caroussel1.png" alt="Image 1">
+      <img src="assets/caroussel2.png" alt="Image 2">
+      <img src="assets/caroussel3.png" alt="Image 3">
+      <img src="assets/caroussel4.png" alt="Image 4">
+      <img src="assets/caroussel5.png" alt="Image 5">
+      <img src="assets/caroussel6.png" alt="Image 6">
+    </div>
+    <button class="prev" onclick="move(-1)">&#10094;</button>
+    <button class="next" onclick="move(1)">&#10095;</button>
+  </div>
+  <h1>En savoir plus</h1>
+  <div class="container">
+    <img src="assets/caroussel1.png" alt="Image 1" class="image" id="image1">
+    <div class="overlay" id="overlay1">
+      <span class="close" id="close1">&times;</span>
+      <div class="overlay-content">
+        <img src="assets/port1.png" alt="Votre image agrandie" class="expanded-image">
+        <p>Avec un algotihme conçu en c pour retrouver le carre dans une map</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="assets/caroussel2.png" alt="Image 2" class="image" id="image2">
+    <div class="overlay" id="overlay2">
+      <span class="close" id="close2">&times;</span>
+      <div class="overlay-content">
+        <img src="assets/minishell.png" alt="Votre image agrandie" class="expanded-image">
+        <p>recoder les commandes du terminal linux</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container" style="text-align: center;">
+    <img src="assets/caroussel6.png" alt="Image 3" class="image" id="image3">
+    <div class="overlay" id="overlay3">
+      <span class="close" id="close3">&times;</span>
+      <div class="overlay-content">
+        <img src="assets/cuisine.png" alt="Votre image agrandie" class="expanded-image">
+        <p>Un site interactif ou un utilisateur creer son compte et peu acceder un des recettes facile moyenne et difficile qui viennent du monde entier</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container" style="text-align: center;">
+    <img src="assets/caroussel4.png" alt="Image 4" class="image" id="image4">
+    <div class="overlay" id="overlay4">
+      <span class="close" id="close4">&times;</span>
+      <div class="overlay-content">
+        <img src="assets/port4.png" alt="Votre image agrandie" class="expanded-image">
+        <p>acheter des places de concert dans une billeterie facile d'acce</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-inner img');
+    const totalSlides = slides.length;
+
+    function move(n) {
+      currentIndex = (currentIndex + n + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    }
+
+    document.querySelectorAll('.image').forEach(function(image) {
+      image.addEventListener('click', function() {
+        var overlayId = this.getAttribute('id').replace('image', 'overlay');
+        document.getElementById(overlayId).style.visibility = 'visible';
+        document.getElementById(overlayId).style.opacity = 1;
+      });
+    });
+
+    document.querySelectorAll('.close').forEach(function(closeButton) {
+      closeButton.addEventListener('click', function() {
+        var overlayId = this.getAttribute('id').replace('close', 'overlay');
+        document.getElementById(overlayId).style.visibility = 'hidden';
+        document.getElementById(overlayId).style.opacity = 0;
+      });
+    });
+  </script>
+</body>
+</html>
