@@ -254,10 +254,11 @@ footer p {
 
 .card {
   position: absolute;
-  height: 50%; /* Garde la taille de la carte à 50% du conteneur */
-  width: 50%;  /* Garde la largeur de la carte à 50% du conteneur */
-  top: 22%; 
-  left: 50%; /* Centre horizontalement la carte */
+  height: 150px; 
+  width: 150px; 
+  top: 50%; 
+  left: 50%; 
+  /*transform: translate(-50%, -50%);*/
   transition: all 0.3s ease;
   transform-style: preserve-3d;
   border-radius: 50%;
